@@ -40,10 +40,10 @@ input.onGesture(Gesture.Shake, function () {
 
   // output
   if (randomNumberOne < randomNumberTwo) {
-    basic.showNumber(randomNumberOne) ;basic.showString('<') ;basic.showNumber(randomNumberTwo)
+    basic.showString(randomNumberOne.toString()) ;basic.showString('<') ;basic.showString(randomNumberTwo.toString())
     basic.showIcon(IconNames.Sad)
   } else {
-    basic.showNumber(randomNumberOne); basic.showString('>') ;basic.showNumber(randomNumberTwo)
+    basic.showString(randomNumberOne.toString()); basic.showString('>') ;basic.showString(randomNumberTwo.toString())
     basic.showIcon(IconNames.Sad)
   }
 })
