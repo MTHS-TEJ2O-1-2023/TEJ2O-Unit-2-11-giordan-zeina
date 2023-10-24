@@ -10,8 +10,9 @@
  * 1st > 2nd
 */
 
-let randomNumberOne: number = randint(0, 99)
-let randomNumberTwo: number = randint(0, 99)
+// Variables
+const randomNumberOne: number = randint(0, 99)
+const randomNumberTwo: number = randint(0, 99)
 
 // Clean up
 basic.clearScreen()
@@ -21,22 +22,30 @@ input.onButtonPressed(Button.A, function () {
   basic.clearScreen()
   basic.showString('#1:')
   basic.showNumber(randomNumberOne)
+  basic.showIcon(IconNames.Happy)
 })
 
 input.onButtonPressed(Button.B, function () {
   basic.clearScreen()
   basic.showString('#2:')
   basic.showNumber(randomNumberTwo)
+  basic.showIcon(IconNames.Happy)
 })
 
+// input
 input.onGesture(Gesture.Shake, function () {
+  basic.clearScreen()
+
+  // output
   if (randomNumberOne < randomNumberTwo) {
     basic.showNumber(randomNumberOne)
     basic.showString('<')
     basic.showNumber(randomNumberTwo)
+    basic.showIcon(IconNames.Sad)
   } else {
     basic.showNumber(randomNumberOne)
     basic.showString('>')
     basic.showNumber(randomNumberTwo)
+    basic.showIcon(IconNames.Sad)
 }
 })
