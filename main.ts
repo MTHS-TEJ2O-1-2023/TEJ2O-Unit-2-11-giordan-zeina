@@ -18,7 +18,7 @@ const randomNumberTwo: number = randint(0, 99)
 basic.clearScreen()
 basic.showIcon(IconNames.Happy)
 
-//input #1
+// input #1
 input.onButtonPressed(Button.A, function () {
   basic.clearScreen()
   basic.showString('#1:')
@@ -26,7 +26,7 @@ input.onButtonPressed(Button.A, function () {
   basic.showIcon(IconNames.Happy)
 })
 
-//input #2
+// input #2
 input.onButtonPressed(Button.B, function () {
   basic.clearScreen()
   basic.showString('#2:')
@@ -40,10 +40,10 @@ input.onGesture(Gesture.Shake, function () {
 
   // output
   if (randomNumberOne < randomNumberTwo) {
-    basic.showString(randomNumberOne.toString()) ;basic.showString('<') ;basic.showString(randomNumberTwo.toString())
+    basic.showString(randomNumberOne.toString()); basic.showString('<'); basic.showString(randomNumberTwo.toString())
     basic.showIcon(IconNames.Sad)
   } else {
-    basic.showString(randomNumberOne.toString()); basic.showString('>') ;basic.showString(randomNumberTwo.toString())
+    basic.showString(randomNumberOne.toString()); basic.showString('>'); basic.showString(randomNumberTwo.toString())
     basic.showIcon(IconNames.Sad)
   }
 })
